@@ -22,7 +22,7 @@ export const projectsData: Project[] = [
     title: 'Jira Clone',
     category: 'Jira Clone',
     description: 'Клон Jira с drag-and-drop досками, управлением задачами и авторизацией.',
-    stack: ['React', 'TypeScript', 'Tailwind', 'Zustand'],
+    stack: ['React 18', 'TypeScript', 'Redux Toolkit', 'dnd-kit', 'SCSS'], 
     githubUrl: 'https://github.com/eliseevgeniy/jira-clone',
     liveUrl: '#',
     image: jiraImg
@@ -32,7 +32,7 @@ export const projectsData: Project[] = [
     title: 'Figma Clone',
     category: 'Figma Clone',
     description: 'Веб-редактор для совместного проектирования интерфейсов в реальном времени.',
-    stack: ['Next.js', 'Liveblocks', 'Tailwind'],
+    stack: ['Nuxt 4', 'Vue 3', 'Vuetify 3', 'SCSS'],
     githubUrl: 'https://github.com/eliseevgeniy/figma-clone',
     liveUrl: '#',
     image: figmaImg
@@ -42,7 +42,7 @@ export const projectsData: Project[] = [
     title: 'Chat App',
     category: 'Чат',
     description: 'Мессенджер с обменом сообщениями в реальном времени, статусами и группами.',
-    stack: ['React', 'Socket.io', 'Node.js'],
+    stack: ['Node.js', 'Express', 'Socket.IO', 'Redis', 'Vanilla JS'],
     githubUrl: 'https://github.com/eliseevgeniy/chat-app',
     liveUrl: '#',
     image: chatImg
@@ -52,7 +52,7 @@ export const projectsData: Project[] = [
     title: 'Landing Page',
     category: 'Лэндинг',
     description: 'Одностраничный сайт для стартапа с анимациями и формами подписки.',
-    stack: ['HTML', 'CSS', 'JavaScript'],
+    stack: ['HTML5', 'CSS3', 'Flexbox', 'CSS Grid'],
     githubUrl: 'https://github.com/eliseevgeniy/landing',
     liveUrl: '#',
     image: landingImg
@@ -62,9 +62,9 @@ export const projectsData: Project[] = [
     title: 'Weather App',
     category: 'API',
     description: 'SPA на React для просмотра текущей погоды и прогноза на 7 дней в избранных городах. Данные берутся из открытого API Open-Meteo.',
-    stack: ['React 19', 'TypeScript', 'React Bootstrap', 'SCSS'],
+    stack: ['React 19', 'TypeScript', 'React Bootstrap', 'SCSS', 'React Router', 'Open-Meteo API'],
     githubUrl: 'https://github.com/eliseevgeniy/Weather-App',
-    liveUrl: '#', // Ссылку на живой сайт можно добавить, если задеплоите
+    liveUrl: '#',
     image: weatherImg
   },
   {
@@ -72,7 +72,7 @@ export const projectsData: Project[] = [
     title: 'Yasenevo',
     category: 'Multi-page',
     description: 'Дипломный проект на курсе Frontend-разработчика. Адаптивный многостраничный сайт с использованием CSS Grid и медиазапросов.',
-    stack: ['HTML5', 'CSS3', 'CSS Grid', 'Media Queries'],
+    stack: ['HTML5', 'CSS3'],
     githubUrl: 'https://github.com/eliseevgeniy/Yasenevo',
     liveUrl: '#', 
     image: yasenevoImg
