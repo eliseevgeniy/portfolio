@@ -24,7 +24,7 @@ export const projectsData: Project[] = [
     description: 'Клон Jira с drag-and-drop досками, управлением задачами и авторизацией.',
     stack: ['React 18', 'TypeScript', 'Redux Toolkit', 'dnd-kit', 'SCSS'], 
     githubUrl: 'https://github.com/eliseevgeniy/jira-clone',
-    liveUrl: '#',
+    liveUrl: 'https://jira-clone-psi-green.vercel.app/',
     image: jiraImg
   },
   {
@@ -34,7 +34,7 @@ export const projectsData: Project[] = [
     description: 'Веб-редактор для совместного проектирования интерфейсов в реальном времени.',
     stack: ['Nuxt 4', 'Vue 3', 'Vuetify 3', 'SCSS'],
     githubUrl: 'https://github.com/eliseevgeniy/figma-clone',
-    liveUrl: '#',
+    liveUrl: 'https://figma-clone-rosy-sigma.vercel.app/',
     image: figmaImg
   },
   {
@@ -54,7 +54,7 @@ export const projectsData: Project[] = [
     description: 'Одностраничный сайт для стартапа с анимациями и формами подписки.',
     stack: ['HTML5', 'CSS3', 'Flexbox', 'CSS Grid'],
     githubUrl: 'https://github.com/eliseevgeniy/landing',
-    liveUrl: '#',
+    liveUrl: 'https://eliseevgeniy.github.io/landing/',
     image: landingImg
   },
   {
@@ -74,7 +74,7 @@ export const projectsData: Project[] = [
     description: 'Дипломный проект на курсе Frontend-разработчика. Адаптивный многостраничный сайт с использованием CSS Grid и медиазапросов.',
     stack: ['HTML5', 'CSS3'],
     githubUrl: 'https://github.com/eliseevgeniy/Yasenevo',
-    liveUrl: '#', 
+    liveUrl: 'https://eliseevgeniy.github.io/Yasenevo/', 
     image: yasenevoImg
   },
 ];
