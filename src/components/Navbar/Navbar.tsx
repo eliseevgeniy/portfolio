@@ -1,14 +1,11 @@
 import { Link, NavLink } from 'react-router-dom';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { useTheme } from '../../hooks/useTheme'; // <-- Импорт хука
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  // Переключение темы
-  const toggleTheme = () => {
-    document.documentElement.classList.toggle('dark');
-  };
+  const { toggleTheme } = useTheme(); // <-- Используем хук
 
   const navLinks = [
     { name: 'Главная', path: '/' },
@@ -23,14 +20,17 @@ export const Navbar = () => {
         
         {/* Логотип */}
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="relative w-12 h-12 flex items-center justify-center rounded-full border border-brand-500/50 group-hover:border-brand-500 transition-colors overflow-hidden">
+          <div className="relative w-12 h-12 flex items-center justify-center rounded-full border border-brand-500/50 group-hover:border-brand-500 transition-colors">
             <span 
               className="text-3xl bg-clip-text text-transparent bg-linear-to-br from-brand-500 to-accent-400 flex items-center justify-center leading-none pt-4"
               style={{ fontFamily: "'Great Vibes', cursive" }}
             >
               E
             </span>
-          </div>      
+          </div>
+          <span className="text-xl font-display font-bold hidden sm:block">
+            Евгений
+          </span>
         </Link>
 
         {/* Десктопное меню */}
@@ -50,7 +50,7 @@ export const Navbar = () => {
           ))}
         </nav>
 
-        {/* Кнопки действий (Тема и Бургер) */}
+        {/* Кнопки действий */}
         <div className="flex items-center gap-4">
           <button 
             onClick={toggleTheme} 
@@ -61,7 +61,6 @@ export const Navbar = () => {
             <Moon className="w-5 h-5 block dark:hidden" />
           </button>
           
-          {/* Мобильное меню (бургер) */}
           <button 
             className="md:hidden p-2" 
             onClick={() => setIsOpen(!isOpen)}
@@ -72,7 +71,7 @@ export const Navbar = () => {
         </div>
       </div>
 
-      {/* Выпадающее мобильное меню */}
+      {/* Мобильное меню */}
       {isOpen && (
         <div className="md:hidden border-t border-(--border-color) bg-(--surface-color) absolute w-full">
           <nav className="flex flex-col p-4 gap-4">
