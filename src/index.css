@@ -1,22 +1,18 @@
-/* Подключаем современные шрифты от Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap');
-
 @import "tailwindcss";
 
 @theme {
-  /* Наши фирменные цвета */
   --color-brand-50: #eef2ff;
-  --color-brand-500: #6366f1; /* Индиго */
+  --color-brand-500: #6366f1;
   --color-brand-600: #4f46e5;
-  --color-accent-400: #22d3ee; /* Циан */
+  --color-accent-400: #22d3ee;
   --color-accent-500: #06b6d4;
   
-  /* Шрифты */
   --font-sans: "Inter", sans-serif;
   --font-display: "Space Grotesk", sans-serif;
 }
 
-/* Задаем базовые переменные для тем */
+/* Переменные для светлой темы */
 :root {
   --bg-color: #f8fafc;
   --text-color: #0f172a;
@@ -24,17 +20,20 @@
   --border-color: #e2e8f0;
 }
 
+/* Переменные для темной темы */
 .dark {
   --bg-color: #0b1120;
-  --text-color: #e5e7eb;
+  --text-color: #f1f5f9; /* Сделали цвет текста почти белым для контраста */
   --surface-color: #111827;
   --border-color: #1f2937;
 }
 
+/* Базовые стили для body */
 body {
   background-color: var(--bg-color);
-  color: var(--text-color);
+  color: var(--text-color); /* Текст наследует цвет из переменной */
   font-family: var(--font-sans);
   transition: background-color 0.3s ease, color 0.3s ease;
   min-height: 100vh;
 }
+

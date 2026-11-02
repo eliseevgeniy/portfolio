@@ -37,7 +37,10 @@ export const ProjectCard = ({ project, onClick }: { project: Project; onClick: (
         <h3 className="text-xl font-display font-bold mt-2 mb-3">{project.title}</h3>
         <div className="flex flex-wrap gap-2">
           {project.stack.map(tech => (
-            <span key={tech} className="px-2.5 py-1 bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-gray-300 text-xs rounded-md font-medium">
+            <span 
+              key={tech} 
+              className="px-2.5 py-1 bg-gray-100 dark:bg-slate-800 text-gray-700 dark:text-gray-300 text-xs rounded-md font-medium"
+            >
               {tech}
             </span>
           ))}

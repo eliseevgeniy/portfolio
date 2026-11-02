@@ -71,18 +71,24 @@ export const ProjectModal = ({ project, onClose }: ModalProps) => {
                 </div>
               </div>
 
-              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+              <p 
+                className="mb-6 leading-relaxed text-base" 
+                style={{ color: document.documentElement.classList.contains('dark') ? '#e5e7eb' : '#4b5563' }}
+              >
                 {project.description}
               </p>
 
               <h4 className="font-semibold mb-3">Использованные технологии:</h4>
-              <div className="flex flex-wrap gap-2 mb-8">
-                {project.stack.map(tech => (
-                  <span key={tech} className="px-3 py-1 bg-gray-100 dark:bg-slate-800 text-gray-700 dark:text-gray-300 text-sm rounded-lg font-medium">
-                    {tech}
-                  </span>
-                ))}
-              </div>
+            <div className="flex flex-wrap gap-2 mb-8">
+              {project.stack.map(tech => (
+                <span 
+                  key={tech} 
+                  className="px-3 py-1 bg-gray-100 dark:bg-slate-800 text-gray-700 dark:text-gray-200 text-sm rounded-lg font-medium"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
 
               {/* Ссылки */}
               <div className="flex flex-wrap gap-4 pt-6 border-t border-(--border-color)">
@@ -90,7 +96,11 @@ export const ProjectModal = ({ project, onClose }: ModalProps) => {
                   href={project.githubUrl} 
                   target="_blank" 
                   rel="noreferrer"
-                  className="flex items-center gap-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-6 py-3 rounded-xl font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
+                  className="flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-colors hover:opacity-90"
+                  style={{ 
+                    backgroundColor: document.documentElement.classList.contains('dark') ? '#ffffff' : '#111827',
+                    color: document.documentElement.classList.contains('dark') ? '#111827' : '#ffffff'
+                  }}
                 >
                   <GithubIcon className="w-5 h-5" /> Исходный код
                 </a>
